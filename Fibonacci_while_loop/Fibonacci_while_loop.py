@@ -1,15 +1,8 @@
 def fibo(n):
-	if (n==0):
+	if (n==1 or n==2):
 		return 1
-	a=0
-	b=1
-	c=a+b
-	while(n>0):
-		c=a+b
-		a=b
-		b=c
-		n=n-1
-	return c
+	else:
+		return fibo(n-1)+fibo(n-2)
 n=int(input())
 print(fibo(n))
 
